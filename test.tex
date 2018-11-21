@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+%\usepackage{ebgaramond}
+\usepackage{garamondx}
+
+\newfontfamily
+\bordeauxfont[%
+  Path=./,
+  ItalicFont={BordeauxLight-Italic},
+  BoldFont={BordeauxMedium-Regular},
+  BoldItalicFont={BordeauxMedium-Italic}
+]{BordeauxLight}
+
+\parindent=0pt
+
+\begin{document}
+
+\section{Styles}
+Normal text.  \textit{Italic Text.}  \textsc{Smallcaps.}  \textbf{Boldface.}  \textit{\textbf{Bold Italic Text.}}
+
+\section{Ligatures}
+\subsection{Valid Letters}
+AA Aa aA aa\\
+BB Bb bB bb\\
+CD Cd cD cd\\
+\subsection{Invalid Letters}
+FF Ff fF ff\\
+FI Fi fI fi\\
+
+\section{Strings}
+a string of text\\
+a fine string of text\\
+a definition of an efficient and fine string of text\\
+finally, the problem is solved!\\
+
+\section{Fontspec}
+{\bordeauxfont This text should be in Bordeaux Light.}\\
+{\bordeauxfont \textit{This text should be in Bordeaux Light italic.}}\\
+{\bordeauxfont \textbf{This text should be in Bordeaux Light boldface.}}\\
+{\bordeauxfont \textbf{\textit{This text should be in Bordeaux Light italic boldface.}}}
+
+
+\end{document}
