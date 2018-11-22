@@ -7,7 +7,7 @@ TEXLUA = texlua
 NAME = test
 
 #LATEX_OPTS = -shell-escape
-TEX4EBOOK_SWITCHES = -x
+TEX4EBOOK_SWITCHES = -x -c config.cfg
 #TEX4EBOOK_OPTS = \"$(NAME)\"
 #TEX4EBOOK_OPTS = \"MyFonts\"
 MAKE4HT_SWITCHES = -x
@@ -17,7 +17,8 @@ pdf:
 	$(LATEX) $(OPTS) $(NAME).tex
 	$(LATEX) $(OPTS) $(NAME).tex
 
-epub:	htf
+#epub:	htf
+epub:
 	$(TEX4EBOOK) $(TEX4EBOOK_SWITCHES) $(NAME).tex $(TEX4EBOOK_OPTS)
 
 htf:
