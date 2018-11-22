@@ -11,6 +11,11 @@
   BoldItalicFont={BordeauxMedium-Italic}
 ]{BordeauxLight}
 
+\newfontfamily
+\animalsfont[%
+  Path=./
+]{Animals-Regular}
+
 \parindent=0pt
 
 \begin{document}
@@ -34,10 +39,13 @@ a definition of an efficient and fine string of text\\
 finally, the problem is solved!\\
 
 \section{Fontspec}
+\subsection{Bordeaux}
 {\bordeauxfont This text should be in Bordeaux Light.}\\
 {\bordeauxfont \textit{This text should be in Bordeaux Light italic.}}\\
 {\bordeauxfont \textbf{This text should be in Bordeaux Light boldface.}}\\
 {\bordeauxfont \textbf{\textit{This text should be in Bordeaux Light italic boldface.}}}
 
+\subsection{Animals}
+{\animalsfont\Huge a b c d e f g h i j k l m n o p q r s t u v w x y z}
 
 \end{document}
