@@ -17,6 +17,8 @@
   Path=./
 ]{Animals-Regular}
 
+\newcommand\animals[1]{\bgroup\animalsfont#1\egroup}
+
 \parindent=0pt
 
 \begin{document}
@@ -47,6 +49,6 @@ finally, the problem is solved!\\
 {\bordeauxfont \textbf{\textit{This text should be in Bordeaux Light italic boldface.}}}
 
 \subsection{Animals}
-{\animalsfont\Huge a b c d e f g h i j k l m n o p q r s t u v w x y z}
+\animals{\Huge a b c d e f g h i j k l m n o p q r s t u v w x y z}
 
 \end{document}
